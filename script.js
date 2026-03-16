@@ -1,11 +1,9 @@
-//your JS code here. If required.
 const form = document.getElementById("loginForm");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
 const existingBtn = document.getElementById("existing");
 
-// Check if credentials exist
 const savedUser = localStorage.getItem("username");
 const savedPass = localStorage.getItem("password");
 
@@ -13,7 +11,6 @@ if(savedUser && savedPass){
   existingBtn.style.display = "block";
 }
 
-// Form submission
 form.addEventListener("submit", function(e){
   e.preventDefault();
 
@@ -31,7 +28,6 @@ form.addEventListener("submit", function(e){
   }
 });
 
-// Existing user login
 existingBtn.addEventListener("click", function(){
   const user = localStorage.getItem("username");
   alert(`Logged in as ${user}`);
